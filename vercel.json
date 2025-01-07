@@ -1,0 +1,20 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "WILL_BE_SET_IN_VERCEL_DASHBOARD",
+    "VITE_SUPABASE_ANON_KEY": "WILL_BE_SET_IN_VERCEL_DASHBOARD"
+  }
+}
